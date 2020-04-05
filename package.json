@@ -4,7 +4,7 @@
   "description": "Chartcord App using socket io & Node",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
+    "start": "node server -PORT 3000",
     "dev":"nodemon server"
   },
   "repository": {
@@ -23,5 +23,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
+  },
+    "engines": {
+    "node": "12.9.1"
   }
 }

@@ -1,6 +1,7 @@
 const path =require('path');
 const express= require('express');
 const http = require ('http');
+var serveStatic = require("serve-static");
 const socketio=require('socket.io');
 const formatMessage= require('./utils/messages')
 const {getCurrentUser,userJoin,userLeft,getRoomUsers} = require("./utils/users");
@@ -10,7 +11,7 @@ const server =http.createServer(app);
 const io =socketio(server);
 const botName='ChatCord Bot'
 
-app.use(express.static(path.join(__dirname,'public')));
+app.use(serveStatic(path.join(__dirname,'public')));
 
 io.on('connection',(socket)=> {
     console.log('Connection Created');
