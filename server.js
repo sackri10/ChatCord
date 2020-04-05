@@ -12,7 +12,9 @@ const io =socketio(server);
 const botName='ChatCord Bot'
 
 app.use(serveStatic(path.join(__dirname,'public')));
-
+app.get("/", (req, res, next) =>
+  res.sendFile(path.join(__dirname, "public/index.html"))
+);
 io.on('connection',(socket)=> {
     console.log('Connection Created');
     socket.on('joinRoom',({username,room})=>{
