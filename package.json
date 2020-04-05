@@ -4,7 +4,8 @@
   "description": "Chartcord App using socket io & Node",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "dev":"nodemon server"
   },
   "repository": {
     "type": "git",
@@ -14,5 +15,13 @@
     "socketio"
   ],
   "author": "Krishna",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
 }
